@@ -42,12 +42,11 @@ public class DropCalculation {
         int randomTypes = new Random().nextInt(maxTypes - minTypes) + minTypes;
 
         ArrayList<ItemStack> itemsToDrop = new ArrayList<>();
-        // assume the min is at least one
         // this calculates how many types of items we want to drop
         for (int i = 0; i < randomTypes; i++) {
             // generate a random item
             ItemStack randomItem = new ItemStack(Material.values()[new Random().nextInt(Material.values().length)]);
-            while (randomItem.getType() == Material.AIR && randomItem.getType() == Material.WATER && randomItem.getType() == Material.LAVA) {
+            while (randomItem.getType() == Material.AIR && randomItem.getType() == Material.WATER && randomItem.getType() == Material.LAVA && !itemsToDrop.contains(randomItem)) {
                 // if the material is illegal, reroll it
                 // also checks for duplicate items
                 randomItem = new ItemStack(Material.values()[new Random().nextInt(Material.values().length)]);
