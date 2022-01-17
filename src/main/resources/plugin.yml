@@ -1,0 +1,9 @@
+name: RandomDrops
+version: '${project.version}'
+main: lol.hyper.randomdrops.RandomDrops
+api-version: 1.18
+author: hyperdefined
+description: Randomize drops of blocks and mobs.
+commands:
+  randomdrops:
+    description: The main command.

@@ -1,0 +1,19 @@
+enabled-drops:
+  block-break: true
+  mob-kill: true
+
+# Save whatever drops for each block/mob, so they drop the same item(s) each time.
+# False will randomize every single drop.
+save-drops-in-memory: true
+
+drop-values:
+  # Set how many types of items will drop.
+  items-per-drop:
+    min: 1
+    max: 1
+  # Set how many items for each type will drop.
+  item-quantity:
+    min: 10
+    max: 20
+
+config-version: 1
